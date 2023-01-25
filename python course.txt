@@ -1,0 +1,206 @@
+python links:-
+------------------
+Python installation Link:
+https://www.python.org/downloads/
+
+Vs code Installation Link:
+https://code.visualstudio.com/download
+
+Mobile app  for Python :
+https://play.google.com/store/apps/details?id=ru.iiec.pydroid3&hl=en_IN&gl=US&pli=1
+
+Python Introduction + Installation Recording:
+https://youtu.be/FLVIV9Bzp8M
+
+Variables, Data Types , Comments Recording.
+https://youtu.be/2NU06G7BsPg
+
+Operators , Control Statements Recording
+https://youtu.be/-FIS1FNfFLE
+
+Websites for Practicing
+Beginner:
+https://www.w3schools.com/python/python_exercises.asp
+
+Intermediate:
+https://www.hackerrank.com/domains/python
+
+Advanced:
+https://leetcode.com/problems/word-subsets/discuss/1233091/Python-Practice
+
+List in Python
+https://youtu.be/xJEiVgPKRDc
+
+Strings in Python
+https://youtu.be/zmLhJ-mVPO0
+
+Dictionary and Tuple
+https://youtu.be/FwdYS6lUlVM
+
+
+
+Duplicates removing using List
+------------------
+
+test_list = [1, 3, 5, 6, 3, 5, 6, 1,6,6,6,6]
+res = []
+d=[res.append(x) for x in test_list if x not in res]
+print (res)
+
+Set and frozen set
+https://youtu.be/FuKyAD3nXQ8
+
+
+Super Market Bill Generation 
+https://youtu.be/_zb4xxmo5b4
+
+
+Functions and lambda function
+https://youtu.be/-VxkhyQ4Y34
+
+
+Advance functions and  Web Scraping
+https://youtu.be/QT7cNZJTbus
+
+flipcart program :-
+---------------------------
+import requests 
+import pandas as pd 
+from bs4 import BeautifulSoup
+response=requests.get("https://www.flipkart.com/search?q=mobiles&as=on&as-show=on&otracker=AS_Query_TrendingAutoSuggest_2_0_na_na_na&otracker1=AS_Query_TrendingAutoSuggest_2_0_na_na_na&as-pos=2&as-type=TRENDING&suggestionId=mobiles&requestId=c3568ff8-cbf3-495a-83ba-65f4d3bd745c")
+soup=BeautifulSoup(response.content,'html.parser')
+names=soup.find_all('div',class_='_4rR01T')
+name=[]
+for i in names[0:23]:
+    d=i.get_text()
+    name.append(d)
+prices=soup.find_all('div',class_='_30jeq3 _1_WHN1')
+price=[]
+for i in prices[0:23]:
+    d=i.get_text()
+    price.append(d)
+rates=soup.find_all('div',class_='_3LWZlK')
+rate=[]
+for i in rates[0:23]:
+    d=i.get_text()
+    rate.append(float(d))
+images=soup.find_all('img',class_='_396cs4')
+image=[]
+for i in images[0:23]:
+    d=i['src']
+    image.append(d)
+links=soup.find_all('a',class_='_1fQZEK')
+link=[]
+for i in links[0:23]:
+    d="https://www.flipkart.com"+i['href']
+    link.append(d)
+
+#list-->table
+df=pd.DataFrame()
+df['Name']=name
+df['Price']=price
+df['Ratings']=rate
+df['Images']=image
+df['Links']=link
+df.to_csv('mobiles_data1.csv')
+
+
+Error Handling and File Handling
+https://youtu.be/91kKmLqYCu8
+
+
+1000 python Mcqs 
+https://www.sanfoundry.com/1000-python-questions-answers/
+
+
+40 Python Interview Questions
+https://youtube.com/playlist?list=PLbMVPNscUopS0sl1pHuPWGp_lEzEznMlI
+
+Oops introduction class ,object, self
+https://youtu.be/Mcc2rMjDHa0
+
+
+Oops and Machine Learning introduction
+https://youtu.be/1TJ1Ww4l3iw
+
+
+Follow the below videos and install Anaconda:
+https://youtu.be/BstjWSgsL5I
+
+Jupyter Note Book
+https://youtu.be/gciP-8ygGH4 
+
+Numpy Recording
+https://youtu.be/7mum2sAfmh4
+
+Pandas Recording
+https://youtu.be/3dI6B_ixZdI
+
+Matplotlib and Eda Project Recording 
+https://youtu.be/DI4vtNudwCQ
+
+Resume building 
+https://youtu.be/vXCwPxHy6RM
+
+Power Bi Recording
+https://youtu.be/zcK0hxX4M0k
+
+https://www.youtube.com/watch?v=7jaQv6xfQjY
+
+Regex Patterns Tool:
+https://pythex.org/
+
+threading and Regex Recording
+https://youtu.be/l1Rg1SPhcmI
+
+Django web frame work
+https://youtu.be/8RxI8lS79C0
+
+Django Rest Frame work
+https://youtu.be/g7a25oEngPQ
+
+Career guidance Recording
+https://youtu.be/uPRYZCLrP0k
+
+Django Project Recording:
+https://youtu.be/TUwyW6FS2yk
+
+Git and GitHub Recording
+https://youtu.be/A61aYT-jaUw
+
+Project Videos:
+https://drive.google.com/drive/folders/15RJ_Yr8oH_aNccJ0JhBxiiL_EDO3IqeS
+
+Projects Source Code:
+https://drive.google.com/drive/folders/1_pEvOq4HTVZFkiorWCMlRONrK3TtyEnp?usp=sharing
+
+Problem Solving Python Questions
+https://youtube.com/playlist?list=PLbMVPNscUopS0sl1pHuPWGp_lEzEznMlI
+
+Python 100 Projects Sources Codes:
+https://github.com/kiransagar1/100-Python-Projects-for-Practice
+
+SQL Recording
+https://youtu.be/H4Dlmla5zUc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
